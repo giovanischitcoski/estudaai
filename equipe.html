@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossa Equipe - EstudaAí</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/equipe.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/colors.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- Header (mesmo do restante do site) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Estuda<span>Aí</span></a>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="videos.html">Aulas</a></li>
+                    <li><a href="content.html">Materiais</a></li>
+                    <li><a href="equipe.html">Nossa Equipe</a></li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="page-hero equipe-hero">
+        <div class="container">
+            <h1>Nossa Equipe</h1>
+            <p>Conheça quem faz a empresa júnior acontecer</p>
+        </div>
+    </section>
+
+    <!-- Seção da Equipe -->
+    <section class="equipe-section">
+        <div class="container">
+            <!-- Filtros e Busca -->
+            <div class="equipe-filtros">
+                <div class="search-box">
+                    <input type="text" id="search-member" placeholder="Buscar membro...">
+                    <button id="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-controls">
+                    <select id="filter-department">
+                        <option value="all">Todos os departamentos</option>
+                        <option value="presidencia">Presidência</option>
+                        <option value="comunicacao">Comunicação</option>
+                        <option value="ti">Tecnologia da Informação</option>
+                        <option value="rh">Recursos Humanos</option>
+                        <option value="pedagogico">Pedagógico</option>
+                    </select>
+                    
+                    <select id="filter-period">
+                        <option value="all">Todos os períodos</option>
+                    
+                    </select>
+                </div>
+            </div>
+
+            <!-- Grade de Membros -->
+            <div class="equipe-grid" id="equipeGrid">
+                <!-- Membros serão inseridos aqui via JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>EstudaAí</h3>
+                    <p>Aprenda do seu jeito. Onde, quando e como quiser.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="videos.html">Aulas</a></li>
+                        <li><a href="content.html">Materiais</a></li>
+                        <li><a href="equipe.html">Nossa Equipe</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contato@estudaai.com</li>
+                        <li><i class="fas fa-phone"></i> (21) 98765-4321</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 EstudaAí. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Detalhes do Membro -->
+    <div class="membro-modal" id="membroModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="modal-body">
+                <div class="modal-left">
+                    <img id="modal-foto" ="" alt="Foto do membro">
+                </div>
+                <div class="modal-right">
+                    <h3 id="modal-nome"></h3>
+                    <p class="cargo" id="modal-cargo"></p>
+                    <p class="dept" id="modal-dept"></p>
+                    <p class="periodo" id="modal-periodo"></p>
+                    
+                    <div class="membro-contatos">
+                        <a href="#" id="modal-linkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+                        <a href="#" id="modal-email"><i class="fas fa-envelope"></i> E-mail</a>
+                    </div>
+                    
+                    <div class="membro-bio">
+                        <h4>Biografia</h4>
+                        <p id="modal-bio"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/pages/equipe.js"></script>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+:root {
+  /* Color Variables*/
+  --primary-color: #f6bd47;       
+  --secondary-color: #4da7d2;    
+  --accent-color: #e63946;       
+  --light-color: #f8f9fa;        
+  --dark-color: #212529;         
+  --success-color: #2a9d8f;      
+  --warning-color: #f4a261;        
+  --danger-color: #e76f51;         
+  
+  /* Subject Colors*/
+  --math-color: #e63946;           
+  --portuguese-color: #2a9d8f;     
+  --biology-color: #52b788;         
+  --history-color: #f4a261;        
+  --geography-color: #457b9d;       
+  --physics-color: #3a86ff;       
+  --chemistry-color: #8338ec;       
+  --writing-color: #e76f51;          
+
+  
+  /* Typography */
+  --font-main: 'Poppins', sans-serif;
+  --font-size-base: 16px;
+  --line-height-base: 1.6;
+}
