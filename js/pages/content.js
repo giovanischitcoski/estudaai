@@ -1,5 +1,8 @@
+// Aguarda o carregamento completo do DOM antes de executar o código
 document.addEventListener('DOMContentLoaded', function() {
-    // Dados dos materiais (substitua pelos seus arquivos reais)
+    // =============================================
+    // DADOS DOS MATERIAIS DIDÁTICOS
+    // =============================================
     const materiais = {
         resumos: [
             {
@@ -9,17 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 file: '/docs/resumos/matematica',
                 size: '2.4 MB',
                 pages: 12,
-                icon: 'fas fa-file-pdf'
+                icon: 'fas fa-file-pdf' // Ícone do Font Awesome
             },
-            {
-                id: 2,
-                title: 'Resumo de Biologia - Ecologia',
-                description: 'Conceitos essenciais de ecologia para vestibulares.',
-                file: '/docs/resumos/Matemática',
-                size: '1.8 MB',
-                pages: 10,
-                icon: 'fas fa-file-pdf'
-            }
+            // ... outros resumos
         ],
         exercicios: [
             {
@@ -44,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         ],
         provas: [
-            {
+               {
                 id: 1,
                 title: 'ENEM 2022 - Todas as Provas',
                 description: 'Provas completas do ENEM 2022 com gabarito oficial.',
@@ -53,8 +48,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 pages: 66,
                 icon: 'fas fa-file-archive'
             },
-
-
+            
             {               
                 id: 2,
                 title: 'ENEM 2023 - Todas as Provas',
@@ -74,32 +68,41 @@ document.addEventListener('DOMContentLoaded', function() {
                 pages: 66,
                 icon: 'fas fa-file-archive'
             }
-                
-            
         ]
     };
 
-    // Elementos do DOM
-    const tabBtns = document.querySelectorAll('.tab-btn');
-    const contentSections = document.querySelectorAll('.content-section');
+    // =============================================
+    // SELEÇÃO DE ELEMENTOS DO DOM
+    // =============================================
+    const tabBtns = document.querySelectorAll('.tab-btn'); // Botões das abas
+    const contentSections = document.querySelectorAll('.content-section'); // Seções de conteúdo
 
-    // Renderiza os materiais
+    // =============================================
+    // FUNÇÃO PARA RENDERIZAR OS MATERIAIS
+    // =============================================
     function renderMaterials() {
+        // Percorre cada tipo de material (resumos, exercícios, etc.)
         for (const tipo in materiais) {
             const grid = document.getElementById(`${tipo}-grid`);
+            
+            // Se não encontrar a grade, continua para o próximo tipo
             if (!grid) continue;
             
+            // Limpa a grade antes de renderizar
             grid.innerHTML = '';
             
+            // Mostra mensagem se não houver materiais
             if (materiais[tipo].length === 0) {
                 grid.innerHTML = '<p class="no-materials">Nenhum material disponível nesta categoria.</p>';
                 continue;
             }
             
+            // Para cada material, cria um card na grade
             materiais[tipo].forEach(material => {
                 const materialCard = document.createElement('div');
                 materialCard.className = 'material-card scroll-animate';
                 
+                // HTML do card do material
                 materialCard.innerHTML = `
                     <div class="material-icon">
                         <i class="${material.icon}"></i>
@@ -115,21 +118,25 @@ document.addEventListener('DOMContentLoaded', function() {
                     </div>
                 `;
                 
+                // Adiciona o card à grade
                 grid.appendChild(materialCard);
             });
         }
     }
 
-    // Alternar entre abas
+    // =============================================
+    // FUNÇÃO PARA ALTERNAR ENTRE ABAS
+    // =============================================
     tabBtns.forEach(btn => {
         btn.addEventListener('click', function() {
+            // Obtém o ID da aba clicada
             const tabId = this.getAttribute('data-tab');
             
-            // Atualiza aba ativa
+            // Atualiza a aba ativa
             tabBtns.forEach(b => b.classList.remove('active'));
             this.classList.add('active');
             
-            // Mostra a seção correspondente
+            // Mostra a seção de conteúdo correspondente
             contentSections.forEach(section => {
                 section.classList.remove('active');
                 if (section.id === tabId) {
@@ -139,6 +146,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Inicializa a página
-    renderMaterials();
+    // =============================================
+    // INICIALIZAÇÃO DA PÁGINA
+    // =============================================
+    renderMaterials(); // Renderiza os materiais quando a página carrega
 });

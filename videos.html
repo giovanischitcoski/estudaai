@@ -1,22 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configurações básicas do documento -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Videoaulas - EstudaAí</title>
+    
+    <!-- Links para folhas de estilo -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/videos.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/colors.css">
+    
+    <!-- Fontes externas -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Cabeçalho do site -->
     <header class="header">
         <div class="container">
+            <!-- Logo da empresa -->
             <div class="logo">
                 <a href="index.html">Estuda<span>Aí</span></a>
             </div>
+            
+            <!-- Navegação principal -->
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html">Home</a></li>
@@ -25,12 +34,15 @@
                     <li><a href="equipe.html">Nossa Equipe</a></li>
                 </ul>
             </nav>
+            
+            <!-- Botão para menu mobile -->
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
+    <!-- Seção Hero (destaque principal) -->
     <section class="page-hero video-hero">
         <div class="container">
             <h1>Videoaulas para sua aprovação</h1>
@@ -38,13 +50,17 @@
         </div>
     </section>
 
+    <!-- Seção de filtros de vídeo -->
     <section class="video-filter">
         <div class="container">
             <div class="filter-controls">
+                <!-- Caixa de busca -->
                 <div class="search-box">
                     <input type="text" id="search-video" placeholder="Buscar aulas...">
                     <button id="search-btn"><i class="fas fa-search"></i></button>
                 </div>
+                
+                <!-- Filtro por matéria -->
                 <div class="subject-filter">
                     <label for="subject">Filtrar por:</label>
                     <select id="subject">
@@ -63,20 +79,28 @@
         </div>
     </section>
 
+    <!-- Seção principal com grade de vídeos -->
     <section class="video-grid-section">
         <div class="container">
+            <!-- Grade de vídeos (será preenchida via JavaScript) -->
             <div class="video-grid" id="videoGrid">
                 <!-- Vídeos serão carregados aqui via JavaScript -->
             </div>
         </div>
     </section>
 
+    <!-- Modal para exibição dos vídeos -->
     <div class="video-modal" id="videoModal">
         <div class="modal-content">
+            <!-- Botão para fechar o modal -->
             <span class="close-modal">&times;</span>
+            
+            <!-- Container do player de vídeo -->
             <div class="video-container">
                 <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
             </div>
+            
+            <!-- Informações sobre o vídeo -->
             <div class="video-info">
                 <h3 id="videoTitle"></h3>
                 <p id="videoDescription"></p>
@@ -88,10 +112,12 @@
             </div>
         </div>
     </div>
-    <!-- Footer -->
+
+    <!-- Rodapé do site -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Coluna 1 - Sobre a empresa -->
                 <div class="footer-col">
                     <h3>EstudaAí</h3>
                     <p>Aprenda do seu jeito. Onde, quando e como quiser.</p>
@@ -102,6 +128,8 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                
+                <!-- Coluna 2 - Links importantes -->
                 <div class="footer-col">
                     <h3>Links</h3>
                     <ul>
@@ -111,6 +139,8 @@
                         <li><a href="equipe.html">Nossa Equipe</a></li>
                     </ul>
                 </div>
+                
+                <!-- Coluna 3 - Informações de contato -->
                 <div class="footer-col">
                     <h3>Contato</h3>
                     <ul>
@@ -119,16 +149,17 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- Rodapé inferior com direitos autorais -->
             <div class="footer-bottom">
                 <p>&copy; 2025 EstudaAí. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
-        </div>
-    </footer>
 
-    <script src="js/pages/videos.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Scripts JavaScript -->
+    <script src="js/pages/videos.js"></script>  <!-- Script específico da página de vídeos -->
+    <script src="js/main.js"></script>          <!-- Script principal do site -->
 
 </body>
 </html>

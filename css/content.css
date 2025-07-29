@@ -1,21 +1,30 @@
-/* Estilos específicos para a página de materiais */
+/* =============================================
+   ESTILOS ESPECÍFICOS PARA A PÁGINA DE MATERIAIS
+   ============================================= */
+
+/* Hero Section da página de materiais */
 .content-hero {
-    background: linear-gradient(rgba(247, 188, 71, 0.6), rgba(247, 188, 71, 0.6)), url('../images/content-bg.jpg');
+    /* Overlay amarelo semi-transparente sobre imagem de fundo */
+    background: linear-gradient(rgba(247, 188, 71, 0.6), rgba(247, 188, 71, 0.6)), 
+                url('../images/content-bg.jpg');
     background-size: cover;
     background-position: center;
 }
 
+/* Seção de abas de navegação */
 .content-tabs {
     background-color: #f8f9fa;
     padding: 30px 0;
 }
 
+/* Container das abas */
 .tabs {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
 }
 
+/* Botões das abas */
 .tab-btn {
     padding: 12px 24px;
     background-color: white;
@@ -27,36 +36,44 @@
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
+/* Efeito hover nas abas */
 .tab-btn:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
+/* Estilo da aba ativa */
 .tab-btn.active {
     background-color: var(--primary-color);
     color: white;
 }
 
+/* Seção principal de conteúdo */
 .content-sections {
     padding: 40px 0;
 }
 
+/* Seções de conteúdo (escondidas por padrão) */
 .content-section {
     display: none;
 }
 
+/* Seção de conteúdo ativa */
 .content-section.active {
     display: block;
     animation: fadeIn 0.5s ease;
 }
 
+/* Grade de materiais */
 .materials-grid {
     display: grid;
+    /* Layout responsivo - mínimo 280px, máximo espaço igual */
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 30px;
-    margin-top: 30px;
+    gap: 30px; 
+    margin-top: 30px; 
 }
 
+/* Cards individuais de materiais */
 .material-card {
     background-color: white;
     border-radius: 10px;
@@ -66,11 +83,13 @@
     text-align: center;
 }
 
+/* Efeito hover nos cards */
 .material-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 }
 
+/* Ícone do material */
 .material-icon {
     width: 60px;
     height: 60px;
@@ -95,6 +114,7 @@
     margin-bottom: 20px;
 }
 
+/* Botão de download */
 .download-btn {
     display: inline-flex;
     align-items: center;
@@ -107,29 +127,37 @@
     transition: all 0.3s ease;
 }
 
+/* Efeito hover no botão */
 .download-btn:hover {
     background-color: #3aa8d8;
     transform: translateY(-2px);
 }
 
+/* Informações do arquivo (tamanho, páginas) */
 .file-info {
     display: flex;
     justify-content: space-between;
-    margin-top: 15px;
     font-size: 0.8rem;
-    color: #888;
+    color: #888; 
 }
 
+/* Animação de aparecer */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
 }
 
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+
 @media (max-width: 768px) {
+    /* Grade com 1 coluna em telas pequenas */
     .materials-grid {
         grid-template-columns: 1fr;
     }
     
+    /* Centraliza abas em telas pequenas */
     .tabs {
         justify-content: center;
     }

@@ -1,40 +1,55 @@
-/* Efeitos de animação básicos */
+/* =============================================
+   ANIMAÇÕES AO ROLAR A PÁGINA (SCROLL)
+   ============================================= */
 .scroll-animate {
-    opacity: 0;
+    opacity: 0;                
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }
 
 .scroll-animate.animate {
-    opacity: 1;
+    opacity: 1;         
     transform: translateY(0);
 }
 
+/* =============================================
+   EFEITOS DE ANIMAÇÃO CONTÍNUA
+   ============================================= */
 .float-effect {
+    /* Animação de flutuação (sobe e desce) */
     animation: float 6s ease-in-out infinite;
 }
 
 .pulse-effect {
+    /* Animação de pulsação (aumenta e diminui) */
     animation: pulse 2s ease infinite;
 }
 
-/* Transições */
+/* =============================================
+   EFEITOS DE TRANSIÇÃO BÁSICOS
+   ============================================= */
 .fade-in {
+    /* Aparecimento gradual */
     animation: fadeIn 1s ease forwards;
 }
 
 .slide-up {
+    /* Desliza de baixo para cima */
     animation: slideUp 0.8s ease forwards;
 }
 
-/* Delays para animações em sequência */
+/* =============================================
+   DELAYS PARA ANIMAÇÕES EM SEQUÊNCIA
+   ============================================= */
 .delay-1 { animation-delay: 0.1s; }
 .delay-2 { animation-delay: 0.2s; }
 .delay-3 { animation-delay: 0.3s; }
 .delay-4 { animation-delay: 0.4s; }
 .delay-5 { animation-delay: 0.5s; }
 
-/* Efeitos hover */
+/* =============================================
+   EFEITOS HOVER (QUANDO O MOUSE PASSA POR CIMA)
+   ============================================= */
 .hover-scale {
     transition: transform 0.3s ease;
 }
@@ -43,7 +58,9 @@
     transform: scale(1.05);
 }
 
-/* Modal base */
+/* =============================================
+   ESTILOS BASE PARA MODAIS
+   ============================================= */
 .modal {
     display: none;
     position: fixed;
@@ -60,8 +77,8 @@
     background: white;
     margin: 50px auto;
     max-width: 900px;
-    width: 90%;
-    border-radius: 10px;
+    width: 90%; 
+    border-radius: 10px; 
     position: relative;
     animation: slideUp 0.4s ease;
 }

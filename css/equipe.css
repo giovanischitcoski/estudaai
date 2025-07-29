@@ -1,23 +1,31 @@
-/* Estilos específicos para a página de equipe */
+/* =============================================
+   ESTILOS ESPECÍFICOS PARA A PÁGINA DA EQUIPE
+   ============================================= */
+
+/* Hero Section da página da equipe */
 .equipe-hero {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/equipe-bg.jpg');
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+                url('../images/equipe-bg.jpg');
     background-size: cover;
-    background-position: center;
+    background-position: center; 
 }
 
+/* Seção principal da equipe */
 .equipe-section {
-    padding: 60px 0;
+    padding: 60px 0; 
 }
 
+/* Contêiner dos filtros */
 .equipe-filtros {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; 
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 40px; 
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 20px; 
 }
 
+/* Caixa de pesquisa */
 .search-box {
     display: flex;
     flex: 1;
@@ -25,12 +33,12 @@
 }
 
 .search-box input {
-    flex: 1;
+    flex: 1; 
     padding: 12px 20px;
     border: 1px solid #ddd;
     border-radius: 50px 0 0 50px;
     font-size: 1rem;
-    outline: none;
+    outline: none; 
 }
 
 .search-box button {
@@ -38,15 +46,16 @@
     background-color: var(--primary-color);
     color: white;
     border: none;
-    border-radius: 0 50px 50px 0;
+    border-radius: 0 50px 50px 0; 
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease; 
 }
 
 .search-box button:hover {
     background-color: var(--secondary-color);
 }
 
+/* Controles de filtro */
 .filter-controls {
     display: flex;
     gap: 15px;
@@ -60,32 +69,37 @@
     cursor: pointer;
 }
 
+/* Grade de membros da equipe */
 .equipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 30px;
+    gap: 30px; 
 }
 
+/* Cards individuais de membros */
 .membro-card {
     background-color: white;
     border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
+    overflow: hidden; 
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    cursor: pointer; 
 }
 
+/* Efeito hover no card */
 .membro-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1); 
 }
 
+/* Foto do membro */
 .membro-foto {
     width: 100%;
-    height: 200px;
-    object-fit: cover;
+    height: 200px; 
+    object-fit: cover; 
 }
 
+/* Informações do membro */
 .membro-info {
     padding: 20px;
     text-align: center;
@@ -96,9 +110,10 @@
     margin-bottom: 5px;
 }
 
+/* Estilos específicos para cargo, departamento e período */
 .membro-info .cargo {
-    color: var(--primary-color);
-    font-weight: 600;
+    color: var(--primary-color); 
+    font-weight: 600; 
     margin-bottom: 5px;
 }
 
@@ -110,25 +125,29 @@
 
 .membro-info .periodo {
     font-size: 0.8rem;
-    color: #999;
+    color: #999; 
 }
 
-/* Modal de membro */
+/* =============================================
+   MODAL DE DETALHES DO MEMBRO
+   ============================================= */
+
 .membro-modal {
-    display: none;
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    z-index: 2000;
-    overflow-y: auto;
+    background-color: rgba(0, 0, 0, 0.8); 
+    z-index: 2000; 
+    overflow-y: auto; 
 }
 
+/* Conteúdo do modal */
 .modal-content {
     background-color: white;
-    margin: 50px auto;
+    margin: 50px auto; 
     max-width: 800px;
     width: 90%;
     border-radius: 10px;
@@ -136,38 +155,42 @@
     position: relative;
 }
 
+/* Botão para fechar o modal */
 .close-modal {
     position: absolute;
     top: 15px;
     right: 15px;
     font-size: 1.5rem;
-    color: #666;
+    color: #666; 
     cursor: pointer;
-    z-index: 10;
-    transition: color 0.3s ease;
+    z-index: 10; 
+    transition: color 0.3s ease; 
 }
 
 .close-modal:hover {
-    color: var(--dark-color);
+    color: var(--dark-color); 
 }
 
+/* Corpo do modal */
 .modal-body {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; 
 }
 
+/* Lado esquerdo (foto) */
 .modal-left {
     flex: 1;
-    min-width: 300px;
+    min-width: 300px; 
     padding: 30px;
 }
 
 .modal-left img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
 }
 
+/* Lado direito (informações) */
 .modal-right {
     flex: 2;
     min-width: 300px;
@@ -179,6 +202,7 @@
     margin-bottom: 10px;
 }
 
+/* Estilos específicos para cargo, departamento e período no modal */
 .modal-right .cargo {
     font-size: 1.2rem;
     color: var(--primary-color);
@@ -191,29 +215,32 @@
     margin-bottom: 5px;
 }
 
+/* Contatos do membro */
 .membro-contatos {
     margin: 20px 0;
     display: flex;
-    gap: 15px;
-    flex-wrap: wrap;
+    gap: 15px; 
+    flex-wrap: wrap; 
 }
 
 .membro-contatos a {
     display: inline-flex;
     align-items: center;
-    gap: 5px;
+    gap: 5px; 
     padding: 8px 15px;
-    background-color: #f5f5f5;
+    background-color: #f5f5f5; 
     border-radius: 5px;
     color: var(--dark-color);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease; 
 }
 
+/* Efeito hover nos links de contato */
 .membro-contatos a:hover {
     background-color: var(--primary-color);
     color: white;
 }
 
+/* Biografia do membro */
 .membro-bio {
     margin-top: 30px;
 }
@@ -225,24 +252,31 @@
 }
 
 .membro-bio p {
-    line-height: 1.6;
+    line-height: 1.6; 
     color: #555;
 }
 
+/* =============================================
+   RESPONSIVIDADE
+   ============================================= */
+
 @media (max-width: 768px) {
+    /* Filtros em coluna */
     .equipe-filtros {
         flex-direction: column;
         align-items: stretch;
     }
     
     .filter-controls {
-        flex-direction: column;
+        flex-direction: column; 
     }
     
+    /* Modal em coluna */
     .modal-body {
         flex-direction: column;
     }
     
+    /* Reduz padding */
     .modal-left, .modal-right {
         padding: 20px;
     }

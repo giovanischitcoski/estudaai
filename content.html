@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Materiais - EstudaAí</title>
+    
+    <!-- Links para folhas de estilo -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/content.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/colors.css">
+    
+    <!-- Fontes externas -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <!-- Header -->
+    <!-- Cabeçalho do site -->
     <header class="header">
         <div class="container">
+            <!-- Logo da empresa -->
             <div class="logo">
                 <a href="index.html">Estuda<span>Aí</span></a>
             </div>
+            
+            <!-- Navegação principal -->
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -26,12 +34,15 @@
                     <li><a href="equipe.html">Nossa Equipe</a></li>
                 </ul>
             </nav>
+            
+            <!-- Botão para menu mobile -->
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
+    <!-- Seção Hero (destaque da página) -->
     <section class="page-hero content-hero">
         <div class="container">
             <h1>Materiais complementares</h1>
@@ -39,9 +50,11 @@
         </div>
     </section>
 
+    <!-- Seção de abas de navegação -->
     <section class="content-tabs">
         <div class="container">
             <div class="tabs">
+                <!-- Botões das abas -->
                 <button class="tab-btn active" data-tab="resumos">Resumos</button>
                 <button class="tab-btn" data-tab="exercicios">Exercícios</button>
                 <button class="tab-btn" data-tab="mapas">Mapas Mentais</button>
@@ -50,13 +63,14 @@
         </div>
     </section>
 
+    <!-- Seções de conteúdo (aparecem conforme a aba selecionada) -->
     <section class="content-sections">
         <div class="container">
             <!-- Seção de Resumos -->
             <div class="content-section active" id="resumos">
                 <h2>Resumos</h2>
                 <div class="materials-grid" id="resumos-grid">
-                    <!-- Gerado por JavaScript -->
+                    <!-- Conteúdo será gerado dinamicamente por JavaScript -->
                 </div>
             </div>
 
@@ -64,7 +78,7 @@
             <div class="content-section" id="exercicios">
                 <h2>Exercícios</h2>
                 <div class="materials-grid" id="exercicios-grid">
-                    <!-- Gerado por JavaScript -->
+                    <!-- Conteúdo será gerado dinamicamente por JavaScript -->
                 </div>
             </div>
 
@@ -72,7 +86,7 @@
             <div class="content-section" id="mapas">
                 <h2>Mapas Mentais</h2>
                 <div class="materials-grid" id="mapas-grid">
-                    <!-- Gerado por JavaScript -->
+                    <!-- Conteúdo será gerado dinamicamente por JavaScript -->
                 </div>
             </div>
 
@@ -80,15 +94,17 @@
             <div class="content-section" id="provas">
                 <h2>Provas Anteriores</h2>
                 <div class="materials-grid" id="provas-grid">
-                    <!-- Gerado por JavaScript -->
+                    <!-- Conteúdo será gerado dinamicamente por JavaScript -->
                 </div>
             </div>
         </div>
     </section>
-    <!-- Footer -->
+
+    <!-- Rodapé do site -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Coluna 1 - Sobre a empresa -->
                 <div class="footer-col">
                     <h3>EstudaAí</h3>
                     <p>Aprenda do seu jeito. Onde, quando e como quiser.</p>
@@ -99,6 +115,8 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                
+                <!-- Coluna 2 - Links importantes -->
                 <div class="footer-col">
                     <h3>Links</h3>
                     <ul>
@@ -108,6 +126,8 @@
                         <li><a href="equipe.html">Nossa Equipe</a></li>
                     </ul>
                 </div>
+                
+                <!-- Coluna 3 - Informações de contato -->
                 <div class="footer-col">
                     <h3>Contato</h3>
                     <ul>
@@ -116,14 +136,17 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- Rodapé inferior com direitos autorais -->
             <div class="footer-bottom">
                 <p>&copy; 2025 EstudaAí. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
     
-    <script src="js/pages/content.js"></script>
-    <script src="js/main.js"></script>
+    <!-- Scripts JavaScript -->
+    <script src="js/pages/content.js"></script>  <!-- Script específico da página de materiais -->
+    <script src="js/main.js"></script>           <!-- Script principal do site -->
     
 </body>
 </html>

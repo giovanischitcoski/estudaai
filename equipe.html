@@ -2,24 +2,31 @@
 <html lang="pt-BR">
 
 <head>
+    <!-- Configurações básicas da página -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nossa Equipe - EstudaAí</title>
+    
+    <!-- Links para folhas de estilo -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/equipe.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/colors.css">
+    
+    <!-- Fontes externas -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
 <body>
-    <!-- Header (mesmo do restante do site) -->
+    <!-- Cabeçalho do site -->
     <header class="header">
         <div class="container">
             <div class="logo">
                 <a href="index.html">Estuda<span>Aí</span></a>
             </div>
+            
+            <!-- Navegação principal -->
             <nav class="main-nav">
                 <ul>
                     <li><a href="index.html" class="active">Home</a></li>
@@ -28,13 +35,15 @@
                     <li><a href="equipe.html">Nossa Equipe</a></li>
                 </ul>
             </nav>
+            
+            <!-- Botão para menu mobile -->
             <div class="mobile-menu-toggle">
                 <i class="fas fa-bars"></i>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Seção Hero (destaque da página) -->
     <section class="page-hero equipe-hero">
         <div class="container">
             <h1>Nossa Equipe</h1>
@@ -42,16 +51,18 @@
         </div>
     </section>
 
-    <!-- Seção da Equipe -->
+    <!-- Seção principal da equipe -->
     <section class="equipe-section">
         <div class="container">
-            <!-- Filtros e Busca -->
+            <!-- Área de filtros e busca -->
             <div class="equipe-filtros">
+                <!-- Caixa de busca -->
                 <div class="search-box">
                     <input type="text" id="search-member" placeholder="Buscar membro...">
                     <button id="search-btn"><i class="fas fa-search"></i></button>
                 </div>
                 
+                <!-- Filtros por departamento e período -->
                 <div class="filter-controls">
                     <select id="filter-department">
                         <option value="all">Todos os departamentos</option>
@@ -64,22 +75,23 @@
                     
                     <select id="filter-period">
                         <option value="all">Todos os períodos</option>
-                    
+                        <!-- Opções serão preenchidas via JavaScript -->
                     </select>
                 </div>
             </div>
 
-            <!-- Grade de Membros -->
+            <!-- Grade de membros da equipe -->
             <div class="equipe-grid" id="equipeGrid">
-                <!-- Membros serão inseridos aqui via JavaScript -->
+                <!-- Membros serão carregados dinamicamente via JavaScript -->
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Rodapé do site -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
+                <!-- Coluna 1 - Sobre a empresa -->
                 <div class="footer-col">
                     <h3>EstudaAí</h3>
                     <p>Aprenda do seu jeito. Onde, quando e como quiser.</p>
@@ -90,6 +102,8 @@
                         <a href="#"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
+                
+                <!-- Coluna 2 - Links importantes -->
                 <div class="footer-col">
                     <h3>Links</h3>
                     <ul>
@@ -99,6 +113,8 @@
                         <li><a href="equipe.html">Nossa Equipe</a></li>
                     </ul>
                 </div>
+                
+                <!-- Coluna 3 - Informações de contato -->
                 <div class="footer-col">
                     <h3>Contato</h3>
                     <ul>
@@ -107,31 +123,41 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- Rodapé inferior com direitos autorais -->
             <div class="footer-bottom">
                 <p>&copy; 2025 EstudaAí. Todos os direitos reservados.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Modal de Detalhes do Membro -->
+    <!-- Modal para exibir detalhes dos membros -->
     <div class="membro-modal" id="membroModal">
         <div class="modal-content">
+            <!-- Botão para fechar o modal -->
             <span class="close-modal">&times;</span>
+            
+            <!-- Corpo do modal -->
             <div class="modal-body">
+                <!-- Lado esquerdo - Foto do membro -->
                 <div class="modal-left">
                     <img id="modal-foto" ="" alt="Foto do membro">
                 </div>
+                
+                <!-- Lado direito - Informações do membro -->
                 <div class="modal-right">
                     <h3 id="modal-nome"></h3>
                     <p class="cargo" id="modal-cargo"></p>
                     <p class="dept" id="modal-dept"></p>
                     <p class="periodo" id="modal-periodo"></p>
                     
+                    <!-- Contatos do membro -->
                     <div class="membro-contatos">
                         <a href="#" id="modal-linkedin" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
                         <a href="#" id="modal-email"><i class="fas fa-envelope"></i> E-mail</a>
                     </div>
                     
+                    <!-- Biografia do membro -->
                     <div class="membro-bio">
                         <h4>Biografia</h4>
                         <p id="modal-bio"></p>
@@ -141,6 +167,7 @@
         </div>
     </div>
 
+    <!-- Scripts JavaScript -->
     <script src="js/pages/equipe.js"></script>
     <script src="js/main.js"></script>
     
