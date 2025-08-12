@@ -325,6 +325,7 @@ section {
   background-color: var(--dark-color);
   color: white;
   padding: 60px 0 20px;
+  
 }
 
 /* Grid para as colunas do footer */
@@ -333,6 +334,7 @@ section {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
   margin-bottom: 40px;
+  
 }
 
 /* Estilo dos títulos das colunas */
@@ -341,6 +343,7 @@ section {
   margin-bottom: 20px;
   position: relative;
   padding-bottom: 10px;
+
 }
 
 /* Linha decorativa abaixo dos títulos */
@@ -455,7 +458,7 @@ section {
   /* Menu mobile */
   .main-nav {
     position: fixed;
-    top: 80px;
+    top: 100px;
     left: -100%;
     width: 80%;
     height: calc(100vh - 80px);

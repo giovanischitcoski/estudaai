@@ -12,6 +12,34 @@
     overflow: hidden; 
 }
 
+ /* Botão WhatsApp */
+.whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background-color: #25D366;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+      transition: all 0.3s;
+      z-index: 100;
+    }
+    
+    .whatsapp-float:hover {
+      background-color: #128C7E;
+      transform: scale(1.05);
+      box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+    }
+    
+    .whatsapp-float svg {
+      width: 28px;
+      height: 28px;
+      fill: white;
+    }
 /* Container do conteúdo do hero */
 .hero .container {
     display: flex;
